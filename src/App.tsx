@@ -3,7 +3,6 @@ import "./App.css";
 import {
   boad3X3,
   Boad3X3,
-  Cell,
   Player,
   Result,
   SquareIds,
@@ -94,7 +93,7 @@ function App() {
           combination?.gameOver === true
             ? `Winner is: ${combination?.player}`
             : ""
-        } ${moveCount===0 ? "Start Game":""}`}
+        } ${moveCount === 0 ? "Start Game" : ""}`}
         <div className="squareLayout">
           {(boad || []).map((boad) =>
             (boad || []).map((square) => {
