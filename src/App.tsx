@@ -13,11 +13,11 @@ function App() {
   let player1: Player = "X",
     player2: Player = "O";
 
-  const [squareIdOHistory, setSquareIdOHistory] = useState<SquareIds[]>([]);
-  const [selectedIds, setSelectedIds] = useState<SquareIds | undefined>(
-    undefined
-  );
-  const [squareIdXHistory, setSquareIdXHistory] = useState<SquareIds[]>([]);
+  // const [squareIdOHistory, setSquareIdOHistory] = useState<SquareIds[]>([]);
+  // const [selectedIds, setSelectedIds] = useState<SquareIds | undefined>(
+  //   undefined
+  // );
+  // const [squareIdXHistory, setSquareIdXHistory] = useState<SquareIds[]>([]);
   const [boad, setBoad] = useState(boad3X3);
   const [combination, setCombination] = useState<Result>({
     combinations: null,
@@ -27,11 +27,8 @@ function App() {
   const [moveCount, setMoveCount] = useState(0);
 
   const player = useMemo(() => {
-    // if (combination?.gameOver === true) return null;
     return moveCount % 2 === 0 ? player1 : player2;
-    // }
   }, [moveCount]);
-  console.log(player, moveCount);
 
   const getFlatBoad = (boad: Boad3X3): Player[] => {
     return boad.flat().map((cell) => cell.value);
@@ -81,10 +78,10 @@ function App() {
       return updateBoad;
     });
     setMoveCount((prev) => prev + 1);
-    setSelectedIds(id);
-    moveCount % 2 === 0
-      ? setSquareIdXHistory((prev) => [id, ...prev])
-      : setSquareIdOHistory((prev) => [id, ...prev]);
+    // setSelectedIds(id);
+    // moveCount % 2 === 0
+    //   ? setSquareIdXHistory((prev) => [id, ...prev])
+    //   : setSquareIdOHistory((prev) => [id, ...prev]);
   };
   return (
     <>
