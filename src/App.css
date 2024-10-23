@@ -1,0 +1,75 @@
+#root {
+  font-family: Arial, sans-serif;
+
+
+  /* max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; */
+}
+
+body{
+  padding:0px;
+  margin:0px
+}
+
+
+.container{
+  background-color: rgb(41, 38, 38);
+  height:100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  font-size: 35px;
+  text-shadow:  
+  0 0 1em rgb(242, 242, 246),
+  0 0 0.9em blue;
+
+}
+
+.squareLayout {
+  width:fit-content;
+  display: grid;
+  /* width: 200px; */
+  /* height: 200px; */
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 5px;
+  padding:10px;
+  background-color: #5F0FBF;
+  /* margin: auto; */
+}
+
+.square{
+  /* height:60px;
+  width: 60px; */
+  align-content: center;
+  text-align: center;
+  background-color: #41084D;
+  /* margin:auto */
+}
+.square.green {
+  /* border: 2px solid green; */
+  background-color: rgb(1, 1, 105)
+}
+
+.square.red {
+  background-color: red;
+}
+
+.squareValue{
+  color: #FFFFFF;
+  font-size: 70px;
+  /* text-shadow: currentColor 1px 1px 12px; */
+  /* 0 0 0.5em blue; */
+}
+.squareValue.blue{
+  text-shadow:#4D68E6 2px 2px 15px
+}
+.squareValue.pink{
+  text-shadow:#C61A57 2px 2px 15px
+}
